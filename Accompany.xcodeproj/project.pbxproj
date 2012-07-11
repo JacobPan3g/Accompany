@@ -43,7 +43,6 @@
 		16DFB76715AD1C370078C895 /* tableview_bg@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 16DFB74A15AD1C370078C895 /* tableview_bg@2x.png */; };
 		16DFB76815AD1C370078C895 /* viewbg@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 16DFB74B15AD1C370078C895 /* viewbg@2x.png */; };
 		16DFB76915AD1C370078C895 /* x.png in Resources */ = {isa = PBXBuildFile; fileRef = 16DFB74C15AD1C370078C895 /* x.png */; };
-		16DFB76C15AD1F820078C895 /* MainViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 16DFB76B15AD1F820078C895 /* MainViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -89,8 +88,6 @@
 		16DFB74A15AD1C370078C895 /* tableview_bg@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "tableview_bg@2x.png"; sourceTree = "<group>"; };
 		16DFB74B15AD1C370078C895 /* viewbg@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "viewbg@2x.png"; sourceTree = "<group>"; };
 		16DFB74C15AD1C370078C895 /* x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = x.png; sourceTree = "<group>"; };
-		16DFB76A15AD1F820078C895 /* MainViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = MainViewController.h; path = MainView/MainViewController.h; sourceTree = "<group>"; };
-		16DFB76B15AD1F820078C895 /* MainViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = MainViewController.m; path = MainView/MainViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -143,8 +140,6 @@
 				16DFB72615AD1C040078C895 /* JPViewController.h */,
 				16DFB72715AD1C040078C895 /* JPViewController.m */,
 				16DFB71815AD1C040078C895 /* Supporting Files */,
-				16DFB76A15AD1F820078C895 /* MainViewController.h */,
-				16DFB76B15AD1F820078C895 /* MainViewController.m */,
 			);
 			path = Accompany;
 			sourceTree = "<group>";
@@ -290,7 +285,6 @@
 				16DFB71E15AD1C040078C895 /* main.m in Sources */,
 				16DFB72215AD1C040078C895 /* JPAppDelegate.m in Sources */,
 				16DFB72815AD1C040078C895 /* JPViewController.m in Sources */,
-				16DFB76C15AD1F820078C895 /* MainViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -402,6 +396,7 @@
 				16DFB72D15AD1C040078C895 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
