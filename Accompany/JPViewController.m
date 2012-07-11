@@ -2,46 +2,91 @@
 //  JPViewController.m
 //  Accompany
 //
-//  Created by Pan Jacob on 12-7-9.
+//  Created by Pan Jacob on 12-7-11.
 //  Copyright (c) 2012年 __MyCompanyName__. All rights reserved.
 //
 
 #import "JPViewController.h"
 
-@interface JPViewController ()
-
-@end
-
 @implementation JPViewController
 
 @synthesize usrField;
 @synthesize pwdField;
+@synthesize mainViewController;
 
-- (IBAction)backgroundPressed:(id)sender
+- (void)closeKeyboard:(id)sender
 {
-    [usrField resignFirstResponder];
-    [pwdField resignFirstResponder];
+    [self.usrField resignFirstResponder];
+    [self.pwdField resignFirstResponder];
 }
 
-- (IBAction)usrFieldInputFinish:(id)sender
+- (void)nestInput
 {
     [self.pwdField becomeFirstResponder];
 }
+
+- (void)Login
+{
+    if ( [self.usrField.text isEqualToString:@"pig"] && [self.pwdField.text isEqualToString:@"pig"] )
+    {
+        [self performSegueWithIdentifier:@"login" sender:self];
+    }
+}
+
+- (void)didReceiveMemoryWarning
+{
+    [super didReceiveMemoryWarning];
+    // Release any cached data, images, etc that aren't in use.
+}
+
+#pragma mark - View lifecycle
 
 - (void)viewDidLoad
 {
     [super viewDidLoad];
 	// Do any additional setup after loading the view, typically from a nib.
+    
+    //Read the data in the userDefault
+    NSUserDefaults *userDefault = [NSUserDefaults standardUserDefaults];
+    [usrField setText:[userDefault stringForKey:@"username"]];
+    [pwdField setText:[userDefault stringForKey:@"password"]];
 }
 
 - (void)viewDidUnload
 {
     [super viewDidUnload];
     // Release any retained subviews of the main view.
+    // e.g. self.myOutlet = nil;
+}
+
+- (void)viewWillAppear:(BOOL)animated
+{
+    [super viewWillAppear:animated];
+}
+
+- (void)viewDidAppear:(BOOL)animated
+{
+    [super viewDidAppear:animated];
+}
+
+- (void)viewWillDisappear:(BOOL)animated
+{
+	[super viewWillDisappear:animated];
+}
+
+- (void)viewDidDisappear:(BOOL)animated
+{
+    //Save the data
+    NSUserDefaults *userDefault = [NSUserDefaults standardUserDefaults];
+    [userDefault setValue:self.usrField.text forKey:@"username"];
+    [userDefault setValue:self.pwdField.text forKey:@"password"];
+    
+	[super viewDidDisappear:animated];
 }
 
 - (BOOL)shouldAutorotateToInterfaceOrientation:(UIInterfaceOrientation)interfaceOrientation
 {
+    // Return YES for supported orientations
     return (interfaceOrientation != UIInterfaceOrientationPortraitUpsideDown);
 }
 

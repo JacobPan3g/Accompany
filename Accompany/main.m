@@ -2,7 +2,7 @@
 //  main.m
 //  Accompany
 //
-//  Created by Pan Jacob on 12-7-9.
+//  Created by Pan Jacob on 12-7-11.
 //  Copyright (c) 2012年 __MyCompanyName__. All rights reserved.
 //
 

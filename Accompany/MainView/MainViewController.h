@@ -1,5 +1,5 @@
 //
-//  JPAppDelegate.h
+//  MainViewController.h
 //  Accompany
 //
 //  Created by Pan Jacob on 12-7-11.
@@ -8,8 +8,8 @@
 
 #import <UIKit/UIKit.h>
 
-@interface JPAppDelegate : UIResponder <UIApplicationDelegate>
+@interface MainViewController : UIViewController
 
-@property (strong, nonatomic) UIWindow *window;
+- (IBAction)back;
 
 @end
