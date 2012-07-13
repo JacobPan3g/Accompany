@@ -6,15 +6,12 @@
 //  Copyright (c) 2012年 __MyCompanyName__. All rights reserved.
 //
 
-#import <UIKit/UIKit.h>
-#import "MainViewController.h"
+#import <UIKit/UIKit.h>ß
 
-@interface JPViewController : UIViewController <exit>
+@interface JPViewController : UIViewController
 
 @property (nonatomic, retain) IBOutlet UITextField *usrField;
 @property (nonatomic, retain) IBOutlet UITextField *pwdField;
-
-@property (nonatomic, retain) UIViewController *mainViewController;
 
 -(IBAction)closeKeyboard:(id)sender;
 -(IBAction)nestInput;

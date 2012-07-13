@@ -12,7 +12,6 @@
 
 @synthesize usrField;
 @synthesize pwdField;
-@synthesize mainViewController;
 
 - (void)closeKeyboard:(id)sender
 {
