@@ -161,11 +161,11 @@
             </objects>
             <point key="canvasLocation" x="1313" y="-398"/>
         </scene>
-        <!--View Controller - Meal-->
+        <!--Main View Controller - Meal-->
         <scene sceneID="Ozs-B0-Qpu">
             <objects>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Mdw-eK-qfR" userLabel="First Responder" sceneMemberID="firstResponder"/>
-                <viewController id="ebx-Ue-r3E" sceneMemberID="viewController">
+                <viewController id="ebx-Ue-r3E" customClass="MainViewController" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="cL4-us-uZO">
                         <rect key="frame" x="0.0" y="64" width="320" height="367"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
@@ -258,6 +258,9 @@
                             </connections>
                         </barButtonItem>
                     </navigationItem>
+                    <connections>
+                        <outlet property="tableView" destination="j7l-Lb-she" id="Ieg-Y7-c0f"/>
+                    </connections>
                 </viewController>
             </objects>
             <point key="canvasLocation" x="1812" y="-398"/>
@@ -552,6 +555,12 @@
                 <relationship kind="action" name="nestInput"/>
                 <relationship kind="outlet" name="pwdField" candidateClass="UITextField"/>
                 <relationship kind="outlet" name="usrField" candidateClass="UITextField"/>
+            </relationships>
+        </class>
+        <class className="MainViewController" superclassName="UIViewController">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/MainViewController.h"/>
+            <relationships>
+                <relationship kind="outlet" name="tableView" candidateClass="UITableView"/>
             </relationships>
         </class>
     </classes>
