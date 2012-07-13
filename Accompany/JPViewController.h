@@ -7,8 +7,9 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "MainViewController.h"
 
-@interface JPViewController : UIViewController
+@interface JPViewController : UIViewController <exit>
 
 @property (nonatomic, retain) IBOutlet UITextField *usrField;
 @property (nonatomic, retain) IBOutlet UITextField *pwdField;
