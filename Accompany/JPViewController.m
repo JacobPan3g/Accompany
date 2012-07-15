@@ -12,7 +12,6 @@
 
 @synthesize usrField;
 @synthesize pwdField;
-@synthesize mainViewController;
 
 - (void)closeKeyboard:(id)sender
 {
@@ -32,6 +31,14 @@
         [self performSegueWithIdentifier:@"login" sender:self];
     }
 }
+
+//- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender
+//{
+//    UITabBarController *tabbarController = segue.destinationViewController;
+//    UINavigationController *navigationController = [[tabbarController viewControllers] objectAtIndex:0];
+//    MainViewController *mainViewController = [[navigationController viewControllers] objectAtIndex:0];
+//    mainViewController.delegate = self;
+//}
 
 - (void)didReceiveMemoryWarning
 {
@@ -88,6 +95,13 @@
 {
     // Return YES for supported orientations
     return (interfaceOrientation != UIInterfaceOrientationPortraitUpsideDown);
+}
+
+#pragma delegate
+
+- (void)cancel
+{
+    [self dismissModalViewControllerAnimated:YES];
 }
 
 @end

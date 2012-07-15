@@ -13,8 +13,6 @@
 @property (nonatomic, retain) IBOutlet UITextField *usrField;
 @property (nonatomic, retain) IBOutlet UITextField *pwdField;
 
-@property (nonatomic, retain) UIViewController *mainViewController;
-
 -(IBAction)closeKeyboard:(id)sender;
 -(IBAction)nestInput;
 -(IBAction)Login;
